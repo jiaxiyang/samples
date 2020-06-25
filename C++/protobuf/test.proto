@@ -1,0 +1,20 @@
+syntax = "proto2";
+
+package todo;
+
+message Todo {
+  optional string name = 1;
+  optional string description = 2;
+
+  enum TodoStatus {
+    TODO = 1;
+    DONE = 2;
+  }
+
+  message Time {
+    optional string schedule = 1;
+    optional string deadline = 2;
+  }
+
+  optional Time time = 3;
+}
